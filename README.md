@@ -1,4 +1,7 @@
 # myclock
-# myclock.html 
-# myclock.js 
-# digital clock + analog clock
+	myclock.html 
+	myclock.js 
+
+	digital clock + analog clock																			
+
+
