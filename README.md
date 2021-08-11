@@ -1,9 +1,6 @@
 # myclock
-	myclock.html 
-	myclock.js 
-
-	digital clock + analog clock																			
-
-
-#simple clock using canvas in javascript
-#Nmber clock to give exat time 
+Digital and Analog clock in JavaScript 
+>
+[myclock.html](./myclock.html)
+>
+[myclock.js](./myclock.js)
