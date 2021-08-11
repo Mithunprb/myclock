@@ -9,8 +9,8 @@ const ctx = canvas.getContext('2d')
 }
 
 function clock() {
-  var now = new Date();
-  var ctx = document.getElementById('canvas').getContext('2d');
+  let now = new Date();
+  let ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
   ctx.clearRect(0, 0, 150, 150);
   ctx.translate(75, 75);
@@ -21,9 +21,9 @@ function clock() {
   ctx.lineWidth = 8;
   ctx.lineCap = 'round';
 
-  var sec = now.getSeconds();
-  var min = now.getMinutes();
-  var hr  = now.getHours();
+  let sec = now.getSeconds();
+  let min = now.getMinutes();
+  let hr  = now.getHours();
   hr = hr >= 12 ? hr - 12 : hr;
 
   ctx.fillStyle = 'black';
