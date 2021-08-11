@@ -1,4 +1,3 @@
-
 const canvas = document.querySelector('canvas')
 const ctx = canvas.getContext('2d')
    canvas.width = window.innerWidth
@@ -12,9 +11,9 @@ function clock() {
   let now = new Date();
   let ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
-  ctx.clearRect(0, 0, 150, 150);
-  ctx.translate(75, 75);
-  ctx.scale(0.4, 0.4);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.translate(300, 150);
+  ctx.scale(0.7, 0.7);
   ctx.rotate(-Math.PI / 2);
   ctx.strokeStyle = 'black';
   ctx.fillStyle = 'white';
