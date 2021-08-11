@@ -9,48 +9,21 @@ const ctx = canvas.getContext('2d')
 }
 
 function clock() {
-  let now = new Date();
-   let ctx = document.getElementById('canvas').getContext('2d');
-       ctx.save();
-       ctx.clearRect(0, 0, window.innerHeight, window.innerWidth);
-       ctx.translate(500, 150);
-       ctx.scale(0.75, 0.75);
-       ctx.rotate(-Math.PI / 2);
-       ctx.strokeStyle = 'black';
-       ctx.fillStyle = 'white';
-       ctx.lineWidth = 8;
-       ctx.lineCap = 'round';
-/*
+  var now = new Date();
+  var ctx = document.getElementById('canvas').getContext('2d');
+  ctx.save();
+  ctx.clearRect(0, 0, 150, 150);
+  ctx.translate(75, 75);
+  ctx.scale(0.4, 0.4);
+  ctx.rotate(-Math.PI / 2);
+  ctx.strokeStyle = 'black';
+  ctx.fillStyle = 'white';
+  ctx.lineWidth = 8;
+  ctx.lineCap = 'round';
 
-  // Hour marks
-      ctx.save();
-  for (let i = 0; i < 12; i++) {
-       ctx.beginPath();
-       ctx.rotate(Math.PI / 6);
-       ctx.moveTo(100, 0);
-       ctx.lineTo(120, 0);
-       ctx.stroke();
-  }
-       ctx.restore();
-
-  // Minute marks
-       ctx.save();
-       ctx.lineWidth = 5;
-  for (i = 0; i < 60; i++) {
-    if (i % 5!= 0) {
-       ctx.beginPath();
-       ctx.moveTo(117, 0);
-       ctx.lineTo(120, 0);
-       ctx.stroke();
-    }
-       ctx.rotate(Math.PI / 30);
-  }
-      ctx.restore();
-  
- */
-  let sec = now.getSeconds();
-  let min = now.getMinutes();
-  let hr  = now.getHours();
+  var sec = now.getSeconds();
+  var min = now.getMinutes();
+  var hr  = now.getHours();
   hr = hr >= 12 ? hr - 12 : hr;
 
   ctx.fillStyle = 'black';
@@ -74,11 +47,11 @@ function clock() {
   ctx.lineTo(112, 0);
   ctx.stroke();
   ctx.restore();
- 
+
   // Write seconds
   ctx.save();
   ctx.rotate(sec * Math.PI / 30);
-  ctx.strokeStyle = '##476170';
+  ctx.strokeStyle = '#476170';
   ctx.fillStyle = '#476170';
   ctx.lineWidth = 6;
   ctx.beginPath();
